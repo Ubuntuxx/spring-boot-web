@@ -30,15 +30,19 @@ public class IndexController {
 
     @RequestMapping(value = "/listar", method = RequestMethod.GET)
     public String listar(Model model) {
+
+        model.addAttribute("titulo", "listado de usuarios");
+
+
+        return "listar";
+    }
+
+    @ModelAttribute("usuarios")
+    public List<Usuario> poblarUsuarios() {
         List<Usuario> usuarios = Arrays.asList(new Usuario("Luis", "GFonzalez", "unixluisx@protonmail.ch"),
                 new Usuario("Jose", "GFonzalez", "unixluisx@protonmail.ch"),
                 new Usuario("L", "GFonzalez", "unixluisx@protonmail.ch"),
                 new Usuario("L", "GFonzalez", "unixluisx@protonmail.ch"));
-
-
-        model.addAttribute("titulo", "listado de usuarios");
-        model.addAttribute("usuarios", usuarios);
-
-        return "listar";
+        return usuarios;
     }
 }
