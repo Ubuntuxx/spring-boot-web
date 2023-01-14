@@ -42,7 +42,8 @@ public class IndexController {
         List<Usuario> usuarios = Arrays.asList(new Usuario("Luis", "GFonzalez", "unixluisx@protonmail.ch"),
                 new Usuario("Jose", "GFonzalez", "unixluisx@protonmail.ch"),
                 new Usuario("L", "GFonzalez", "unixluisx@protonmail.ch"),
-                new Usuario("L", "GFonzalez", "unixluisx@protonmail.ch"));
+                new Usuario("L", "GFonzalez", "unixluisx@protonmail.ch"),
+                new Usuario("Jose", "GFonzalez", "unixluisx@protonmail.ch"));
         return usuarios;
     }
 }
